@@ -1,8 +1,15 @@
 function myFunction(a, b) {
-
-   let obj = {}
-   a.forEach((a, x) => obj[a] = b[x])  
-   console.log(obj)
+    
+    
+    if (b in a) {
+        console.log(true);
+      } 
+    else {
+        console.log(false) 
+    }
+    
 }
 
-myFunction(['a','b','c'],[1,2,3])
+myFunction({a:1,b:2,c:3},'b')
+myFunction({x:'a',y:'b',z:'c'},'a')
+myFunction({x:'a',y:'b',z:undefined},'z')
