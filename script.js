@@ -1,21 +1,32 @@
-function myFunction(...arrays) {
-    let arr0 = arrays[0]
-    let arr2 = arrays[1]
-    let arr3 = arrays[2]
+function myFunction(arr) {
+
+    let i = arr.length
+    let valores = arr.slice(0, 4)
     
-    if(arr3 == undefined) {
-        console.log(arr0.concat(arr2))
+    if(valores === arr[0]) {
+        console.log(true)
     } else {
-        console.log(arr0.concat(arr2).concat(arr3))
+        console.log(false)
     }
-    
+
+    /* for (var i = 0; i < arr.length; i++) {
+        
+        if (arr[0] === arr[i]) {
+            console.log(true)
+        }
+        else {
+            console.log(false)
+        }
+
+    }
+ */
+    /* let resu = arr.filter((arr) === arr)
+    console.log(resu) */
+
 }
 
-/* function myFunction( ...arrays ) {
-    return arrays.flat()
-} */
-  
 
-myFunction([1, 2, 3], [4, 5, 6])
-myFunction(['a', 'b', 'c'], [4, 5, 6])
-myFunction([true, true], [1, 2], ['a', 'b'])
+myFunction([true, true, true, true])
+myFunction(['test', 'test', 'test'])
+myFunction([1, 1, 1, 2])
+myFunction(['10',10,10,10])
