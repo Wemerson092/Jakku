@@ -1,32 +1,16 @@
 function myFunction(arr) {
-
-    let i = arr.length
-    let valores = arr.slice(0, 4)
     
-    if(valores === arr[0]) {
-        console.log(true)
+    let soma = arr[0].a + arr[0].b 
+    let soma2 = arr[1].a + arr[1].b 
+
+    if(soma > soma2) {
+        console.log([arr[1], arr[0]])
     } else {
-        console.log(false)
+        console.log([arr[0], arr[1]])
     }
-
-    /* for (var i = 0; i < arr.length; i++) {
-        
-        if (arr[0] === arr[i]) {
-            console.log(true)
-        }
-        else {
-            console.log(false)
-        }
-
-    }
- */
-    /* let resu = arr.filter((arr) === arr)
-    console.log(resu) */
-
 }
 
 
-myFunction([true, true, true, true])
-myFunction(['test', 'test', 'test'])
-myFunction([1, 1, 1, 2])
-myFunction(['10',10,10,10])
+myFunction([{a:1,b:2},{a:5,b:4}])
+myFunction([{a:2,b:10},{a:5,b:4}])
+myFunction([{a:1,b:7},{a:2,b:1}])
