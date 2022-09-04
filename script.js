@@ -1,16 +1,16 @@
-function myFunction(arr) {
-    
-    let soma = arr[0].a + arr[0].b 
-    let soma2 = arr[1].a + arr[1].b 
+function myFunction(a, b) {
 
-    if(soma > soma2) {
-        console.log([arr[1], arr[0]])
-    } else {
-        console.log([arr[0], arr[1]])
-    }
+    /*
+    const dif = Math.abs(a - b);
+    return dif / 1000 / 60 / 60 / 24
+    */
+
+    var sub = Math.abs(b.getTime() - a.getTime());
+    var dias = Math.ceil(sub / (1000 * 3600 * 24));
+
+    console.log(dias)
+
 }
 
-
-myFunction([{a:1,b:2},{a:5,b:4}])
-myFunction([{a:2,b:10},{a:5,b:4}])
-myFunction([{a:1,b:7},{a:2,b:1}])
+myFunction(new Date('2020-06-11'), new Date('2020-06-01'))
+myFunction(new Date('2000-01-01'), new Date('2020-06-01'))
